@@ -3,7 +3,7 @@
 # assumptions:
 #     1. we are only interested in max sum > 0
 #     2. ignore zeroes at extremities
-# credits: Kandal's algorithm
+# credits: Kadane's algorithm
 
 def maxsum_subarray(arr):
 
