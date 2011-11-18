@@ -19,9 +19,8 @@ void next_seq( char * seq ) {
   }
 
   bzero( next_seq, MAXLEN);
-  len = 0;
 
-  for ( i = 1, freq = 1; i < strlen( seq ); i++ ) {
+  for ( i = 1, freq = 1, len = 0; i < strlen( seq ); i++ ) {
     //printf( "DBG: i=%d; seq[%d]=%c; len=%d\n", i, i, seq[i], len );
     if ( seq[i] == seq[i-1] ) {
       freq ++;

@@ -1,5 +1,5 @@
 1. maxsum_subarray.py
-   Finds the sub-array with the maximum sum (> 0) within a given array.
+   Finds the sub-array with the maximum sum (> 0) within a given array in O(n).
 
 2. sequence.c
    A C implementation of the look-and-say sequence
@@ -10,3 +10,6 @@
    string that don't contribute to any word are replaced by '-'.
    Note: This is a greedy implementation that I'm not proud of.
          Suggestions for improvement are welcome.
+
+4. matrix_search.py
+   Search for element in matrix in O(m+n), where m: #rows and n: #cols
