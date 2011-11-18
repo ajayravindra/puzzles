@@ -13,26 +13,32 @@ M = [
     [51, 53, 64, 76, 81]
     ]
 
-if __name__ == '__main__':
-  for row in M:
+def print_matrix(matrix):
+  for row in matrix:
     print row
 
-  print
-  num = int(raw_input("Enter num to search for: "))
-
+def search_matrix(matrix, num):
   row = 0
-  col = len(M[0]) - 1
-  num_steps = 0
+  col = len(matrix[0]) - 1
   steps = []
 
-  while row < len(M) and col >= 0:
-    num_steps = num_steps + 1
-    steps.append(M[row][col])
-    if num == M[row][col]:
-      print "%d found at (%d, %d) in %d steps: %s" %(num, row+1, col+1, num_steps, ' -> '.join([str(x) for x in steps]))
-      sys.exit()
-    if num < M[row][col]: col = col - 1
-    if num > M[row][col]: row = row + 1   # note: col might have changed
+  while row < len(matrix) and col >= 0:
+    steps.append(matrix[row][col])
+    if num == matrix[row][col]:
+      return True, row, col, steps
+    if num < matrix[row][col]: col = col - 1
+    if num > matrix[row][col]: row = row + 1   # note: col might have changed
 
-  print "%d not found after %d steps: %s" %(num, num_steps, ' -> '.join([str(x)
-for x in steps]))
+  return False, row, col, steps
+
+if __name__ == '__main__':
+  print_matrix(M)
+  num = int(raw_input("Enter num to search for: "))
+
+  (found, row, col, steps) = search_matrix(M, num)
+  if found:
+    print "%d found at (%d, %d) after %d steps: %s" \
+          %(num, row, col, len(steps), steps)
+  else:
+    print "%d not found after %d steps: %s" %(num, len(steps), steps)
+
