@@ -13,3 +13,6 @@
 
 4. matrix_search.py
    Search for element in matrix in O(m+n), where m: #rows and n: #cols
+
+5. merge_sort.py
+   Classic merge sort in O(n)
