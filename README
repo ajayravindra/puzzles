@@ -16,3 +16,9 @@
 
 5. merge_sort.py
    Classic merge sort in O(n)
+
+6. zero_pair.py
+   A Python program to find pairs of integers in a list that add up to zero
+   in O(n). I also wrote some unit tests and a function that verifies this
+   result by comparing it with a brute force algorithm.
+
