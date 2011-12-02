@@ -19,6 +19,12 @@
 
 6. zero_pair.py
    A Python program to find pairs of integers in a list that add up to zero
-   in O(n). I also wrote some unit tests and a function that verifies this
+   in O(n). I also wrote some unit tests and a function that verifies the
    result by comparing it with a brute force algorithm.
+
+7. reverse_words_in_setence.py
+   If you were expecting for a long-winded solution here, you'll find a reason
+   to love Python. A simple 1-line function works to reverse the words in a
+   sentence. What it gains in simplicity, it loses in efficiency. But let's
+   dwell in the magic of Python for a bit, shall we? =)
 
